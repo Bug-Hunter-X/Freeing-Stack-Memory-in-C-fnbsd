@@ -1,0 +1,3 @@
+# Freeing Stack Memory in C
+This repository demonstrates a common error in C programming: attempting to free memory allocated on the stack using `free()`.  The `free()` function is intended for deallocating memory dynamically allocated using functions like `malloc()`, `calloc()`, and `realloc()`.  Attempting to use it on stack memory, as shown in `bug.c`, leads to undefined behavior and potential program crashes.
+The `bugSolution.c` file demonstrates the correct way to manage memory in this scenario, avoiding the use of `free()` for stack-allocated variables.  This is important for writing robust and stable C programs.
